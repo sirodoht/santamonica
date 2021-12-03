@@ -1,4 +1,4 @@
-base_url = "http://localhost:3000/"
+base_url = "podcast.com"
 title = "podcast"
 description = "Podcast website."
 language_code = "en"
