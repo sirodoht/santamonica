@@ -32,7 +32,8 @@ zola serve
 * There is no theme used, all HTML files are in the `templates` directory.
 * Content is stored as markdown files.
 * Episodes are stored in `content/episodes/episode-name.md`
-* Static pages are stored
+* Static pages are stored in `content/page.md`
+* Episode sound files are stored anywhere and linked in episode markdown files.
 
 ## File hierarchy
 
