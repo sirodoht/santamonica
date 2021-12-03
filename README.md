@@ -87,7 +87,7 @@ To generate the certificate, one can use this command with [certbot](https://cer
 certbot certonly --webroot -d podcast.com --email your@email.com -w /var/www/_letsencrypt -n --agree-tos
 ```
 
-Note: One will need to disable the SSL `http` directive before running the above command.
+Note: One will need to comment out the SSL `server` directive before running the above command.
 
 ## Screenshots
 
