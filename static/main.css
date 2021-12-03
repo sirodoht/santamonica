@@ -198,7 +198,7 @@ main {
 @media (max-width: 650px) {
     main {
         width: 100%;
-        padding-top: 16px;
+        margin: 32px auto;
         padding-left: 8px;
         padding-right: 8px;
     }

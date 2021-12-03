@@ -11,8 +11,9 @@ of self-hosted-ness.
 * Content in markdown files
 * "Read more" feature
 * Native HTML `<audio>` player
-* No JS
+* Simple, responsive CSS based only on [normalize.css](https://github.com/necolas/normalize.css)
 * Easily customisable
+* No JS
 * Zola is the only third-party dependency used
 
 ## How to use
@@ -41,12 +42,12 @@ zola serve
 $ tree
 .
 ├── config.toml  # zola configuration file
-├── content/  # contains episode files in markdown
-│   ├── about.md  # also contains static pages files
-│   └── episodes/
+├── content/  # markdown content files
+│   ├── about.md  # static pages file (About page)
+│   └── episodes/  # contains episode files in markdown
 │       ├── _index.md  # zola file to designate taxonomy
 │       ├── episode-1.md  # example first episode markdown file
-│       └── episode-2.md  # another example
+│       └── episode-2.md  # another example episode
 ├── public/  # generated HTML files
 │   ├── 404.html  # generated
 │   ├── atom.xml  # generated RSS
