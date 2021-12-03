@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="{{ config.description }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+        <link rel="stylesheet" href="{{ get_url(path='main.css') }}">
+    </head>
+
+    <body>
+        {% block content %}
+        <main>
+            <h1 class="brand">
+                <a href="/">{{ config.title }}</a>
+            </h1>
+            <div class="subtitle">
+                awarded best podcast of the week
+            </div>
+
+            <div class="episodes">
+                {% set blog = get_section(path='episodes/_index.md') %}
+                {% for episode in blog.pages %}
+                <div class="episodes-single">
+                    <a class="episodes-single-title" href="{{ episode.permalink }}">
+                        {{ episode.title }}
+                    </a>
+
+                    <time datetime="{{ episode.date | date(format="%+") }}" itemprop="datePublished">
+                        {{ episode.date | date(format='%B %e, %Y') }}
+                    </time>
+
+                    <div>
+                        {{ episode.summary | safe }}
+                        Listen <a href="{{ episode.permalink }}">here</a>.
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </main>
+        {% endblock content %}
+
+        <footer>
+            <a href="/rss.xml">RSS</a>
+            / <a href="/about">About</a>
+            / No rights reserved
+        </footer>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+base_url = "http://localhost:3000/"
+title = "podcast"
+description = "Podcast website."
+language_code = "en"
+compile_sass = false
+highlight_code = true
+highlight_theme = "ayu-light"
+generate_feed = true

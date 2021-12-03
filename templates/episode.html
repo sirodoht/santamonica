@@ -1,0 +1,35 @@
+{% extends 'index.html' %}
+
+{% block title %}{{ page.title }}{% endblock title %}
+
+{% block content %}
+<main>
+    <div class="brand">
+        <a href="/">{{ config.title }}</a>
+    </div>
+
+    <article itemscope itemtype="http://schema.org/BlogPosting">
+        <h1 itemprop="name headline">{{ page.title }}</h1>
+
+        <div class="byline">
+            Published on
+            <time datetime="{{ page.date | date(format="%+") }}" itemprop="datePublished">
+                {{ page.date | date(format="%B %e, %Y") }}
+            </time>
+        </div>
+
+        <div>
+            <audio controls src="{{ page.extra.episode_url }}"></audio>
+        </div>
+
+        <div itemprop="articleBody">
+            {{ page.content | safe }}
+        </div>
+    </article>
+
+    <br>
+    <p>
+        <a href="/">← all episodes</a>
+    </p>
+</main>
+{% endblock content %}
